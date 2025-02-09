@@ -1,5 +1,5 @@
 module "db" {
-  source = "../../terraform-aws-securitygroup"
+  source = "git::https://github.com/daws-78s/terraform-aws-securitygroup.git?ref=main"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for DB MySQL Instances"
@@ -9,7 +9,7 @@ module "db" {
 }
 
 module "backend" {
-  source = "../../terraform-aws-securitygroup"
+  source = "git::https://github.com/daws-78s/terraform-aws-securitygroup.git?ref=main"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for Backend Instances"
@@ -19,7 +19,7 @@ module "backend" {
 }
 
 module "frontend" {
-  source = "../../terraform-aws-securitygroup"
+  source = "git::https://github.com/daws-78s/terraform-aws-securitygroup.git?ref=main"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for Frontend Instances"
@@ -29,7 +29,7 @@ module "frontend" {
 }
 
 module "bastion" {
-  source = "../../terraform-aws-securitygroup"
+  source = "git::https://github.com/daws-78s/terraform-aws-securitygroup.git?ref=main"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for Bastion Instances"
@@ -39,7 +39,7 @@ module "bastion" {
 }
 
 module "ansible" {
-  source = "../../terraform-aws-securitygroup"
+  source = "git::https://github.com/daws-78s/terraform-aws-securitygroup.git?ref=main"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for Ansible Instances"
